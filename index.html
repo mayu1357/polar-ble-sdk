@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Polar OAuth Callback</title>
+</head>
+<body>
+  <h1>OAuth Callback Received</h1>
+  <p>Check URL parameters for the authorization code.</p>
+  <script>
+    // ここでURLパラメータ(codeやstate)を画面に表示する簡単なスクリプトも入れられます
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    const state = params.get('state');
+    document.body.innerHTML += `<p>code: ${code}</p><p>state: ${state}</p>`;
+  </script>
+</body>
+</html>
